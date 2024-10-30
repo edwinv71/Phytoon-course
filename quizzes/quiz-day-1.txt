@@ -1,0 +1,70 @@
+Day 1 Quiz
+----------
+1. List some of the characteristics of Python.
+Object-oriented.
+Interpreted (no compile stage)
+Easy to learn and use (because its syntax is declarative)
+High-level programming (we don't have to worry what systems it runs on)
+Open source, free to use
+Dynamically-typed (takes variable type from value, and can change over time)
+Named after Monty Python
+
+2. The Python interpreter can be executed in two ways. What are they?
+script mode
+interactive
+
+3. How should variables and functions be named in Python?
+snake_case (lower case underscore separated)
+not starting with numbers or specials
+no reserved words
+meaningfully - clear wording
+
+
+4. What does a variable contain/reference, and how should it (almost) always be declared?
+it should be initialised when declared (because there is no keyword, and it takes its initial type from initial value)
+(you have to have something on the RHS of =)
+<a reference> = <a value>
+
+5. Describe each part of the following statement:
+
+x = 12
+
+x is named as a variable
+if variable with that name already exists then it is re-assigned using =
+if immutable value on RHS already exists then it is reassigned using = to current reference
+= is assignment operator, assigns R-L direction
+12 is an int type, or integer literal
+
+6. List 5 of the fundamental data types.
+int, 
+float, 
+str, 
+bool, 
+list[], 
+tuple(), 
+dict{"key": "value", "key2": "value"} - keys may not be duplicated but values may, 
+set{} - individual values, may not contain duplicates
+None
+complex - used a lot in electrical engineering
+- if you want to find a sqrt of a negative number, say sqrt of -4,
+- 2i (i means whole square root of -1) because -2 * -2 yields a positive - you'll never get a minus number
+- i used typically to reference current, in amps
+
+7. How does one read from a list element?
+with indices
+my_list = [1,2,3]
+get the third number:
+my_list[2]
+
+8. Name TWO falsey values (values that will convert to False when passed to a bool() wrapper function):
+empty containers
+0
+
+9. What value does the number 1 become when passed to a float() wrapper function?
+1.0
+
+10. What value does the string value "Hello" become when passed to a bool() wrapper function?
+True
+even " " is true (space character)
+only empty string "" is false
+
