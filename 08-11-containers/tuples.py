@@ -17,7 +17,8 @@ print(fib.index(144))
 
 # we can slice tuples as we would lists
 # returns another tuple
-print(low_numbers := fib[:6])#endIdx(0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144)
+print("low numbers and high numbers slices:")
+print(low_numbers := fib[:6])#endIdx(0, 1, 1, 2, 3, 5)
 print(high_numbers := fib[6:])#startIdx(8, 13, 21, 34, 55, 89, 144)
 
 # we can iterate tuples
@@ -41,6 +42,6 @@ print(fib)
 print(len(fib))
 print(fib[14])
 # if we attempt to re-assign an item:
-fib[14] = 0#TypeError: 'tuple' object does not support item assignment
+# fib[14] = 0#TypeError: 'tuple' object does not support item assignment
 
 # it would be better to say a tuples elements are immutable

@@ -1,0 +1,50 @@
+Day 2 Quiz
+----------
+
+1. What is a for loop best suited to do?
+To execute a code block each time, for a known/specific amount of iterations
+
+2. What is a while loop best suited for?
+When the number of iterations is not known or unlimited
+
+3. When will an optional else clause after a loop run? (any loop, for or while)
+After the loop has completed its last iteration - no break encountered
+
+4. In a function definition, what syntax denotes 
+the block of code that is the body of the function?
+:
+indent  
+
+5. What is the keyword required to exit from this loop:
+
+while True:
+    # some code
+    break
+
+6. Differentiate between a module and a script.
+A module contains functions (and classes)
+A script contains code that calls those functions (and classes)
+functions made available via import statements - TODO
+
+7. If we see the following line in a module, under what circumstances will the code below be executed?
+
+if __name__ == "__main__":
+    # code will run if the containing module is run 
+    # but NOT if we import to another script
+
+8. If a function has a return statement, can any code come after that line?
+it can, but will be unreachable
+having said that, there may be more tahn one return in a functionbut if so, each return will be the very last LOC in that specific PATH THROUGH the function
+often called the HAPPY PATH / SAD PATH
+
+9. If a function has input, what is this called at function definition time?
+parameters
+
+10. If a function has input, what is this called at runtime?
+arguments
+
+11. BONUS QUESTION: What, if anything, do we know in Python about the datatypes of the parameters to a function?
+NOTHING
+They are not defined UNTIL passed in - used in function
+TODO: type hinting - non-enforceable
+

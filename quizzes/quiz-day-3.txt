@@ -1,0 +1,82 @@
+Day 3 Quiz
+----------
+
+1. Which function is pure, a or b?
+b. passes in a copy of the data in thing, whereas a passes a direct dependency on thing
+
+thing = 1
+def a():
+    print(thing)
+
+def b(thing):
+    print(thing)
+
+2. Which of the two functions below has a closure? Note that both functions compile and run. 
+the first one - it has no global dependency on lst
+the lst in the first one is EFFEECTIVELY GLOBAL to the returned function
+
+def outer_a():
+    lst = []
+    def add_to_lst(item):
+        nonlocal lst
+        lst.append(item)
+        return lst
+    return add_to_lst
+
+lst = []
+def outer_b():
+    def add_to_lst(item):
+        global lst
+        lst.append(item)
+        return lst
+    return add_to_lst
+
+3. How does one access the attributes and methods of an object?
+dot notation
+my_object = MyClass()
+my_object.my_prop
+
+
+4. Class names should be in what style?
+CamelCase
+
+
+5. Which dunder method is called (indirectly) when you FIRST create an object of a class?
+the init method (__init__(self))
+
+
+6. The first param. of each method in a class is conventionally named self. To what does this param. refer?
+The current instance UNDER CONSTRUCTION of the class
+The object when the __init__ method is called, is under construction on the RHS of =
+therefore we need a generic reference to itself BEFORE it is assigned on the LHS
+AFTER object constructed and assigned, then we still need a reference to ANY object in its methods
+my_object = MyClass()
+my_object.my_prop
+my_object.my_method()
+
+if my_method uses/mutates my_prop, we cannot code for every instance's name eg. my_object
+so we need a generic term to reference the current object
+
+7. How many objects are created in the following 2 LOC?
+ONE object, two references
+
+class_a = ClassA()
+class_b = class_a
+
+8. Which dunder method should we override in our own custom classes 
+to obtain a meaningful representation of our objects' properties, 
+once we have made the object?
+__str__
+
+
+9. Write a *list slice* to return a new list with every other (even) number from the following list:
+nums = [1,2,3,4,5,6,7,8,9]
+nums[1::2]
+a list slice here demands knowledge of the data
+this may be rewritten as a list comprehension
+we may then TEST each element to see if it is even
+and the order doesn't matter!
+even_nums = [num for num in nums if num % 2 == 0]
+
+10. Using *list comprehension*, return a list from the same list, nums, with just the numbers 5 or less
+small_nums = [num for num in nums if num < 5] # a different condition (Predicate) substituted
