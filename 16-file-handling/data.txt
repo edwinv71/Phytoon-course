@@ -1,0 +1,11 @@
+<class 'dict'>
+[('1234', 'Smith', '500.0'), ('2345', 'Jones', '-150.0'), ('3456', 'Wilson', '2000.0'), ('4567', 'Thompson', '275.0'), ('5678', 'Davis', '100.0')]
+Smith 1234 500.0
+Jones 2345 -150.0
+Wilson 3456 2000.0
+Thompson 4567 275.0
+Davis 5678 100.0
+1234 {'number': 1234, 'name': 'Smith', 'balance': 500.0}
+2345 {'number': 2345, 'name': 'Jones', 'balance': -150.0}
+3456 {'number': 3456, 'name': 'Wilson', 'balance': 2000.0}
+4567 {'number': 4567, 'name': 'Thompson', 'balance': 275.0}
